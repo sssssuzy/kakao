@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>지역검색</title>
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
         <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=989175e76a6346dd32fcb0cf235115d4"></script>
         <link rel="stylesheet" href="style.css"/>
@@ -72,8 +72,8 @@
         });    
         marker.setMap(map);   
         var str ="<div style='padding:5px;color:blue;'>";
-                str+=$(this).attr("{{place}}") + "<br>";
-                str+="<b>Tel:"+$(this).attr("{{phone}}")+"</b>";
+                str+=$(this).attr("place") + "<br>";
+                str+="<b>Tel:"+$(this).attr("phone")+"</b>";
                 str+"</div>";
             var info=new kakao.maps.InfoWindow({content:str});
             kakao.maps.event.addListener(marker,"mouseover", function(){
